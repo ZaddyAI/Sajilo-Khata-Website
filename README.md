@@ -10,7 +10,7 @@ Automatically reads your bank SMS and logs every transaction.
 Set savings goals, visualize your spending, and take full control of your money — all in Nepali Rupees.
 
 [![Download](https://img.shields.io/badge/Download-Play%20Store-00C853?style=for-the-badge&logo=google-play)](https://play.google.com/store/apps/details?id=com.sajilokhata)
-[![Website](https://img.shields.io/badge/Website-sajilokhata.com.np-1A237E?style=for-the-badge)](https://sajilokhata.com.np)
+[![Website](https://img.shields.io/badge/Website-sajilokhata.gambhirpoudel.com.np-1A237E?style=for-the-badge)](https://sajilokhata.gambhirpoudel.com.np)
 
 </div>
 
@@ -107,9 +107,9 @@ Sajilo Khata's SMS parser works with major Nepali banks and digital wallets:
 | | |
 |---|---|
 | Play Store | [Download Sajilo Khata](https://play.google.com/store/apps/details?id=com.sajilokhata) |
-| Website | [sajilokhata.com.np](https://sajilokhata.com.np) |
-| Privacy Policy | [Read Privacy Policy](https://sajilokhata.com.np/privacy-policy) |
-| Terms of Service | [Read Terms](https://sajilokhata.com.np/terms-of-service) |
+| Website | [sajilokhata.gambhirpoudel.com.np](https://sajilokhata.gambhirpoudel.com.np) |
+| Privacy Policy | [Read Privacy Policy](https://sajilokhata.gambhirpoudel.com.np/privacy-policy) |
+| Terms of Service | [Read Terms](https://sajilokhata.gambhirpoudel.com.np/terms-of-service) |
 
 ---
 
