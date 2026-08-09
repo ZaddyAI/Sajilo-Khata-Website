@@ -10,7 +10,7 @@ Automatically reads your bank SMS and logs every transaction.
 Set savings goals, visualize your spending, and take full control of your money — all in Nepali Rupees.
 
 [![Download](https://img.shields.io/badge/Download-Play%20Store-00C853?style=for-the-badge&logo=google-play)](https://play.google.com/store/apps/details?id=com.sajilokhata)
-[![Website](https://img.shields.io/badge/Website-sajilokhata.gambhirpoudel.com.np-1A237E?style=for-the-badge)](https://sajilokhata.gambhirpoudel.com.np)
+[![Website](https://img.shields.io/badge/Website-sajilokhata%2Egambhirpoudel%2Ecom%2Enp-1A237E?style=for-the-badge)](https://sajilokhata.gambhirpoudel.com.np)
 
 </div>
 
