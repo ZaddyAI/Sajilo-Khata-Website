@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F7F9FC;
+  --foreground: #191C1E;
+  --primary: #000666;
+  --primary-container: #1A237E;
+  --secondary: #1B6D24;
+  --secondary-container: #A0F399;
+  --tertiary: #400003;
+  --tertiary-container: #670007;
+  --surface: #F7F9FC;
+  --surface-lowest: #FFFFFF;
+  --surface-low: #F2F4F7;
+  --surface-high: #E6E8EB;
+  --surface-highest: #E0E3E6;
+  --on-surface: #191C1E;
+  --on-surface-variant: #454652;
+  --outline: #767683;
+  --outline-variant: #C6C5D4;
+  --error: #BA1A1A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-surface: var(--surface);
+  --color-surface-lowest: var(--surface-lowest);
+  --color-surface-low: var(--surface-low);
+  --color-surface-high: var(--surface-high);
+  --color-surface-highest: var(--surface-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-error: var(--error);
+  --font-manrope: var(--font-heading);
+  --font-inter: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-body), "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-container) 0%, #283593 50%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, var(--primary-container), var(--secondary), var(--primary-container));
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Subtle float animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Scale on hover */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 6, 102, 0.05),
+    0 10px 20px -2px rgba(0, 6, 102, 0.08),
+    0 20px 40px -4px rgba(0, 6, 102, 0.04);
+}
+
+/* Pulse ring animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--secondary);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Modern card shadow */
+.card-shadow {
+  box-shadow:
+    0 1px 2px rgba(0, 6, 102, 0.04),
+    0 4px 8px rgba(0, 6, 102, 0.04),
+    0 8px 16px rgba(0, 6, 102, 0.03);
+}
+
+.card-shadow-lg {
+  box-shadow:
+    0 2px 4px rgba(0, 6, 102, 0.04),
+    0 8px 16px rgba(0, 6, 102, 0.06),
+    0 16px 32px rgba(0, 6, 102, 0.04),
+    0 32px 64px rgba(0, 6, 102, 0.03);
+}
+
+/* Smooth gradient background for hero */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(26, 35, 126, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(27, 109, 36, 0.1) 0%, transparent 60%),
+    linear-gradient(180deg, #e8ecf5 0%, var(--background) 100%);
+}
+
+/* Section divider gradient */
+.section-divider {
+  background: linear-gradient(90deg, transparent 0%, var(--outline-variant) 50%, transparent 100%);
+  height: 1px;
+}
+
+/* Number counter styling */
+.number-display {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button {
+  transition: all 0.2s ease;
+}
