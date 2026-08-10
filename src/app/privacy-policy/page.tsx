@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { APP_NAME, AUTHOR } from "@/lib/constants";
+import { APP_NAME, AUTHOR, LOGO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: `Privacy Policy - ${APP_NAME}`,
@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/sajilo_khata_logo.png"
+              src={LOGO}
               alt="Sajilo Khata"
               width={40}
               height={40}

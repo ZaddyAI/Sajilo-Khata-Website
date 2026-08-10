@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
+import { LOGO } from "@/lib/constants";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -14,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sajilokhata.gambhirpoudel.com.np/"),
   title: "Sajilo Khata - Nepal SMS Expense Tracker",
   description:
     "Nepal's smartest expense tracker. Automatically reads bank SMS to log income and expenses. Track savings goals, set budgets, and manage your money in NPR.",
@@ -29,7 +31,29 @@ export const metadata: Metadata = {
     title: "Sajilo Khata - Nepal SMS Expense Tracker",
     description:
       "Automatically track income and expenses by reading bank SMS. Built for Nepal.",
+    url: "https://sajilokhata.gambhirpoudel.com.np/",
+    siteName: "Sajilo Khata",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: LOGO,
+        width: 512,
+        height: 512,
+        alt: "Sajilo Khata Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sajilo Khata - Nepal SMS Expense Tracker",
+    description:
+      "Automatically track income and expenses by reading bank SMS. Built for Nepal.",
+    images: [LOGO],
+  },
+  icons: {
+    icon: LOGO,
+    apple: LOGO,
   },
 };
 

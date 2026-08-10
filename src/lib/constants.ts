@@ -3,6 +3,8 @@ export const APP_TAGLINE = "Nepal's smartest expense tracker";
 export const APP_DESCRIPTION =
   "Automatically reads bank SMS to log income and expenses. Track savings goals, set budgets, and manage your money in NPR.";
 
+export const LOGO = "/sajilo_khata_logo.png";
+
 export const AUTHOR = {
   name: "Gambhir Poudel",
   website: "https://gambhirpoudel.com.np",

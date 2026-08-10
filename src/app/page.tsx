@@ -4,6 +4,7 @@ import {
   APP_NAME,
   AUTHOR,
   LINKS,
+  LOGO,
   SUPPORTED_BANKS,
   STATS,
 } from "@/lib/constants";
@@ -149,7 +150,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/sajilo_khata_logo.png"
+              src={LOGO}
               alt="Sajilo Khata"
               width={40}
               height={40}
@@ -209,7 +210,7 @@ export default function Home() {
           </div>
           <div className="mx-auto mb-8 w-32 h-32 md:w-40 md:h-40">
             <Image
-              src="/sajilo_khata_logo.png"
+              src={LOGO}
               alt="Sajilo Khata Logo"
               width={160}
               height={160}
@@ -444,7 +445,7 @@ export default function Home() {
             <div>
               <Link href="/" className="flex items-center gap-2.5">
                 <Image
-                  src="/sajilo_khata_logo.png"
+                  src={LOGO}
                   alt="Sajilo Khata"
                   width={36}
                   height={36}
