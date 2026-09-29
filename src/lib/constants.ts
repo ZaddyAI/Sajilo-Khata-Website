@@ -11,7 +11,7 @@ export const AUTHOR = {
 };
 
 export const LINKS = {
-  playStore: "https://play.google.com/store/apps/details?id=com.sajilokhata",
+  playStore: "https://play.google.com/store/apps/details?id=com.zaddyai.sajilokhata",
   github: "https://github.com/redpixel-labs/sajilo-khata",
   privacy: "/privacy-policy",
   terms: "/terms-of-service",
