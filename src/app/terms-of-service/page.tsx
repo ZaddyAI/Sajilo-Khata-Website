@@ -1,7 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
-import { APP_NAME, AUTHOR, LINKS, LOGO } from "@/lib/constants";
+import { APP_NAME, AUTHOR, DEVELOPER, LINKS } from "@/lib/constants";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: `Terms of Service - ${APP_NAME}`,
@@ -10,41 +12,18 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="flex flex-col">
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 glass-strong border-b border-white/40">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Image
-              src={LOGO}
-              alt="Sajilo Khata"
-              width={40}
-              height={40}
-              className="rounded-xl"
-              priority
-            />
-            <span className="text-xl font-bold text-primary font-manrope tracking-tight">
-              {APP_NAME}
-            </span>
-          </Link>
-          <Link
-            href="/"
-            className="rounded-xl border border-outline-variant/60 bg-white/60 px-5 py-2 text-sm font-semibold text-on-surface backdrop-blur-sm transition-all hover:border-primary/30 hover:text-primary"
-          >
-            Back to Home
-          </Link>
-        </div>
-      </nav>
+    <div className="flex min-h-screen flex-col bg-[#F8F7F2] text-[#202923] antialiased">
+      <Navbar />
 
       {/* Terms of Service Content */}
       <main className="mx-auto w-full max-w-3xl px-6 py-16">
-        <div className="rounded-3xl border border-outline-variant/30 bg-white p-8 md:p-12 card-shadow">
-          <h1 className="text-4xl font-bold font-manrope">Terms of Service</h1>
-          <p className="mt-3 text-sm text-on-surface-variant">
+        <div className="card-ivory p-8 md:p-12 shadow-sm">
+          <h1 className="text-4xl font-extrabold font-manrope text-[#202923]">Terms of Service</h1>
+          <p className="mt-3 text-sm text-[#145C45] font-semibold">
             Last updated: August 9, 2026
           </p>
 
-          <div className="mt-10 space-y-10 text-on-surface-variant leading-relaxed">
+          <div className="mt-10 space-y-10 text-[#607873] leading-relaxed">
             <section>
               <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
                 1. Acceptance of Terms
@@ -384,17 +363,26 @@ export default function TermsOfService() {
               </p>
               <ul className="mt-2 list-disc pl-6 space-y-1.5">
                 <li>
-                  <strong>Developer:</strong> {AUTHOR.name}
+                  <strong>Developer:</strong> {DEVELOPER.name}
                 </li>
                 <li>
                   <strong>Website:</strong>{" "}
                   <a
-                    href={AUTHOR.website}
+                    href={DEVELOPER.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition-colors"
+                    className="text-[#145C45] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#145C45] transition-colors"
                   >
-                    gambhirpoudel.com.np
+                    {DEVELOPER.website.replace("https://", "")}
+                  </a>
+                </li>
+                <li>
+                  <strong>Email:</strong>{" "}
+                  <a
+                    href={`mailto:${DEVELOPER.email}`}
+                    className="text-[#145C45] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#145C45] transition-colors"
+                  >
+                    {DEVELOPER.email}
                   </a>
                 </li>
               </ul>
@@ -403,12 +391,8 @@ export default function TermsOfService() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-auto border-t border-outline-variant/30 bg-surface-lowest">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-center text-sm text-outline">
-          &copy; {new Date().getFullYear()} {APP_NAME}. All rights reserved.
-        </div>
-      </footer>
+      {/* Unified Modern Footer */}
+      <Footer />
     </div>
   );
 }

@@ -65,9 +65,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${manrope.variable} ${inter.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-surface text-on-surface antialiased">
+      <body className="min-h-screen bg-[#F8F7F2] text-[#202923] antialiased selection:bg-[#D8F3E8] selection:text-[#08634D]">
         {children}
       </body>
     </html>
