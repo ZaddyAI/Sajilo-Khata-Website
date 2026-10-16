@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#08634D] text-[#F8F7F2] border-t border-[#0D4738]">
+    <footer className="bg-[#0E7D5E] text-[#F8F7F2] border-t border-[#0B664E]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
@@ -32,9 +32,9 @@ export default function Footer() {
                 href={LINKS.playStore}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-[#08634D] hover:bg-[#D8F3E8] transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-[#0E7D5E] hover:bg-[#D8F3E8] transition-colors shadow-sm"
               >
-                <PlayStoreIcon className="w-4 h-4 text-[#08634D]" />
+                <PlayStoreIcon className="w-4 h-4 text-[#0E7D5E]" />
                 <span>Google Play</span>
               </a>
               <a
@@ -56,24 +56,19 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-xs text-emerald-100/70">
               <li>
-                <a href="#features" className="hover:text-white transition-colors">
+                <Link href="/#features" className="hover:text-white transition-colors">
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-white transition-colors">
+                <Link href="/#how-it-works" className="hover:text-white transition-colors">
                   How It Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#banks" className="hover:text-white transition-colors">
+                <Link href="/#banks" className="hover:text-white transition-colors">
                   Supported Banks
-                </a>
-              </li>
-              <li>
-                <a href="#calculator" className="hover:text-white transition-colors">
-                  Savings Calculator
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -95,14 +90,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#privacy" className="hover:text-white transition-colors">
-                  Privacy Architecture
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-white transition-colors">
+                <Link href="/#faq" className="hover:text-white transition-colors">
                   Security FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

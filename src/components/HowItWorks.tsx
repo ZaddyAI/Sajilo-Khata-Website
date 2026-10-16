@@ -7,7 +7,7 @@ const steps = [
     title: "Download & Open App",
     description:
       "Get Sajilo Khata free from Google Play (under 15MB). Sign in with Google for encrypted cloud backup, or continue completely offline in guest mode.",
-    icon: <SmartphoneIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <SmartphoneIcon className="w-6 h-6 text-[#129671]" />,
     features: ["Under 15MB download size", "Google Sign-In or Offline Guest Mode", "Zero banking passwords required"],
   },
   {
@@ -16,7 +16,7 @@ const steps = [
     title: "Select Bank Senders",
     description:
       "Grant SMS read permission. The on-device engine searches only for verified bank and wallet senders (Nabil, NIMB, NIC Asia, Global IME, eSewa). Private messages and OTPs are never read.",
-    icon: <ShieldCheckIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <ShieldCheckIcon className="w-6 h-6 text-[#129671]" />,
     features: ["Zero cloud SMS transmission", "Encrypted local device storage", "Select or unselect any bank sender"],
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     title: "Spend, Save & Grow in NPR",
     description:
       "Every time you make a Fonepay QR payment, swipe an ATM card, or receive your monthly salary, Sajilo Khata automatically parses the transaction and updates your categorized transaction ledger.",
-    icon: <ChartBarIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <ChartBarIcon className="w-6 h-6 text-[#129671]" />,
     features: ["Real-time debit/credit logging", "12 Nepali category assignments", "Daily savings goal pace updates"],
   },
 ];
@@ -39,7 +39,7 @@ export default function HowItWorks() {
             How It Works
           </div>
           <h2 className="mt-4 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight">
-            Up &amp; running in <span className="text-[#08634D]">3 simple steps.</span>
+            Up &amp; running in <span className="text-[#0E7D5E]">3 simple steps.</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#607873]">
             No complex setup. No manual data entry. Just install, select your bank, and let Sajilo Khata do the rest.
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                   </span>
                 </div>
 
-                <span className="rounded-full bg-[#E7F4EE] px-3 py-1 text-[11px] font-bold text-[#08634D] uppercase tracking-wider">
+                <span className="rounded-full bg-[#E7F4EE] px-3 py-1 text-[11px] font-bold text-[#0E7D5E] uppercase tracking-wider">
                   {item.badge}
                 </span>
 
@@ -78,7 +78,7 @@ export default function HowItWorks() {
               <div className="mt-8 pt-5 border-t border-[#E8E9E2] space-y-2">
                 {item.features.map((feat) => (
                   <div key={feat} className="flex items-center gap-2 text-xs text-[#202923]">
-                    <CheckIcon className="w-3.5 h-3.5 text-[#145C45] shrink-0" />
+                    <CheckIcon className="w-3.5 h-3.5 text-[#129671] shrink-0" />
                     <span>{feat}</span>
                   </div>
                 ))}

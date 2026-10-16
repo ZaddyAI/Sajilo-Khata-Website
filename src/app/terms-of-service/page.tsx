@@ -19,7 +19,7 @@ export default function TermsOfService() {
       <main className="mx-auto w-full max-w-3xl px-6 py-16">
         <div className="card-ivory p-8 md:p-12 shadow-sm">
           <h1 className="text-4xl font-extrabold font-manrope text-[#202923]">Terms of Service</h1>
-          <p className="mt-3 text-sm text-[#145C45] font-semibold">
+          <p className="mt-3 text-sm text-[#129671] font-semibold">
             Last updated: August 9, 2026
           </p>
 
@@ -371,7 +371,7 @@ export default function TermsOfService() {
                     href={DEVELOPER.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#145C45] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#145C45] transition-colors"
+                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
                   >
                     {DEVELOPER.website.replace("https://", "")}
                   </a>
@@ -380,7 +380,7 @@ export default function TermsOfService() {
                   <strong>Email:</strong>{" "}
                   <a
                     href={`mailto:${DEVELOPER.email}`}
-                    className="text-[#145C45] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#145C45] transition-colors"
+                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
                   >
                     {DEVELOPER.email}
                   </a>

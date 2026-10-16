@@ -46,7 +46,7 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-3.5 py-1.5 rounded-full hover:text-[#145C45] hover:bg-[#E7F4EE] transition-all duration-200"
+                  className="px-3.5 py-1.5 rounded-full hover:text-[#129671] hover:bg-[#E7F4EE] transition-all duration-200"
                 >
                   {link.label}
                 </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-sm font-bold text-[#202923] hover:bg-[#E7F4EE] hover:text-[#145C45] transition-colors"
+                  className="rounded-2xl px-4 py-3 text-sm font-bold text-[#202923] hover:bg-[#E7F4EE] hover:text-[#129671] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
               <Link
                 href={LINKS.privacy}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm font-bold text-[#202923] hover:bg-[#E7F4EE] hover:text-[#145C45] transition-colors"
+                className="rounded-2xl px-4 py-3 text-sm font-bold text-[#202923] hover:bg-[#E7F4EE] hover:text-[#129671] transition-colors"
               >
                 Privacy Policy
               </Link>

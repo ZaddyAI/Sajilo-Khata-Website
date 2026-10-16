@@ -10,7 +10,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8F7F2] text-[#202923] antialiased selection:bg-[#D8F3E8] selection:text-[#08634D]">
+    <div className="flex min-h-screen flex-col bg-[#F8F7F2] text-[#202923] antialiased selection:bg-[#D8F3E8] selection:text-[#0E7D5E]">
       {/* Scroll indicator bar & floating back to top */}
       <ScrollProgress />
 

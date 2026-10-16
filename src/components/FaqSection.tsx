@@ -20,7 +20,7 @@ export default function FaqSection() {
             FAQ
           </div>
           <h2 className="mt-4 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight">
-            Frequently asked <span className="text-[#08634D]">questions.</span>
+            Frequently asked <span className="text-[#0E7D5E]">questions.</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#607873]">
             Clear, transparent answers about how Sajilo Khata works, keeps your data safe, and automates your finances.
@@ -34,7 +34,7 @@ export default function FaqSection() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-2xl border border-[#E8E9E2] bg-white transition-all hover:border-[#145C45]"
+                className="overflow-hidden rounded-2xl border border-[#E8E9E2] bg-white transition-all hover:border-[#129671]"
               >
                 <button
                   onClick={() => toggleFaq(index)}
@@ -45,7 +45,7 @@ export default function FaqSection() {
                     {faq.question}
                   </span>
                   <span
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-transform duration-200 ${isOpen ? "rotate-180 bg-[#145C45] text-white" : "bg-[#F8F7F2] text-[#202923]"
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-transform duration-200 ${isOpen ? "rotate-180 bg-[#129671] text-white" : "bg-[#F8F7F2] text-[#202923]"
                       }`}
                   >
                     <ChevronDownIcon className="w-4 h-4" />
@@ -71,7 +71,7 @@ export default function FaqSection() {
             Reach out to developer {DEVELOPER.name} directly at{" "}
             <a
               href={`mailto:${DEVELOPER.email}`}
-              className="text-[#145C45] font-bold underline underline-offset-2 hover:text-[#08634D]"
+              className="text-[#129671] font-bold underline underline-offset-2 hover:text-[#0E7D5E]"
             >
               {DEVELOPER.email}
             </a>

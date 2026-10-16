@@ -57,11 +57,11 @@ export default function HeroAppMockup() {
 
         {/* Floating Chip A (Top Right - Bank SMS detected) */}
         <div className="relax-chip absolute top-2 sm:top-6 -right-2 sm:-right-4 z-30 shadow-lg">
-          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#D8F3E8] text-[#145C45]">
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#D8F3E8] text-[#129671]">
             <ZapIcon className="w-3.5 h-3.5" />
           </span>
           <span className="text-[11px] sm:text-xs">
-            Auto-parsed: <b className="text-[#08634D]">Nabil Rs. 2,500 Dr.</b>
+            Auto-parsed: <b className="text-[#0E7D5E]">Nabil Rs. 2,500 Dr.</b>
           </span>
         </div>
 
@@ -71,7 +71,7 @@ export default function HeroAppMockup() {
             <NepalFlagIcon className="w-3.5 h-3.5" />
           </span>
           <span className="text-[11px] sm:text-xs">
-            Net Balance: <b className="text-[#145C45]">रू 84,250.00</b>
+            Net Balance: <b className="text-[#129671]">रू 84,250.00</b>
           </span>
         </div>
       </div>

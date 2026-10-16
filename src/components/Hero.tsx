@@ -30,7 +30,7 @@ export default function Hero() {
             {/* Display Headline */}
             <h1 className="font-manrope text-4xl sm:text-6xl lg:text-[62px] font-extrabold tracking-tight leading-[1.08] text-[#202923]">
               Your money, <br />
-              <span className="text-[#08634D]">understood</span>. <br />
+              <span className="text-[#0E7D5E]">understood</span>. <br />
               Automatically.
             </h1>
 
@@ -53,7 +53,7 @@ export default function Hero() {
 
               <a
                 href="#features"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#145C45] hover:text-[#08634D] transition-colors py-3 px-2 group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#129671] hover:text-[#0E7D5E] transition-colors py-3 px-2 group"
               >
                 <span>See how it works</span>
                 <span className="group-hover:translate-y-0.5 transition-transform">↓</span>
@@ -63,19 +63,19 @@ export default function Hero() {
             {/* Sajilo Khata Perks list */}
             <ul className="flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm font-semibold text-[#607873] pt-3">
               <li className="flex items-center gap-1.5">
-                <CheckIcon className="w-4 h-4 text-[#145C45]" />
+                <CheckIcon className="w-4 h-4 text-[#129671]" />
                 <span>100% Free Forever</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <CheckIcon className="w-4 h-4 text-[#145C45]" />
+                <CheckIcon className="w-4 h-4 text-[#129671]" />
                 <span>No Bank Passwords</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <CheckIcon className="w-4 h-4 text-[#145C45]" />
+                <CheckIcon className="w-4 h-4 text-[#129671]" />
                 <span>On-Device Privacy</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <CheckIcon className="w-4 h-4 text-[#145C45]" />
+                <CheckIcon className="w-4 h-4 text-[#129671]" />
                 <span>Smart Spending Analytics</span>
               </li>
             </ul>
@@ -90,7 +90,7 @@ export default function Hero() {
         {/* 3 Core Value Pillars */}
         <div className="mt-16 pt-10 border-t border-[#E8E9E2] grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#08634D]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#0E7D5E]">
               <ZapIcon className="w-6 h-6" />
             </div>
             <div>
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#08634D]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#0E7D5E]">
               <MountainIcon className="w-6 h-6" />
             </div>
             <div>
@@ -118,7 +118,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#08634D]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#D8F3E8] text-[#0E7D5E]">
               <TargetIcon className="w-6 h-6" />
             </div>
             <div>

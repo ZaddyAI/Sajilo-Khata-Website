@@ -23,7 +23,7 @@ export default function CtaBanner() {
 
           <h2 className="mt-5 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight leading-tight">
             Take control of your <br className="hidden sm:inline" />
-            <span className="text-[#08634D]">finances today.</span>
+            <span className="text-[#0E7D5E]">finances today.</span>
           </h2>
 
           <p className="mt-4 max-w-xl mx-auto text-base sm:text-lg text-[#607873] leading-relaxed">
@@ -48,26 +48,26 @@ export default function CtaBanner() {
               rel="noopener noreferrer"
               className="btn-secondary-mint inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-bold"
             >
-              <GithubIcon className="w-4 h-4 text-[#145C45]" />
+              <GithubIcon className="w-4 h-4 text-[#129671]" />
               <span>Explore on GitHub</span>
             </a>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-[#607873]">
             <span className="flex items-center gap-1.5">
-              <CheckIcon className="w-4 h-4 text-[#145C45]" />
+              <CheckIcon className="w-4 h-4 text-[#129671]" />
               Android 8.0+
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckIcon className="w-4 h-4 text-[#145C45]" />
+              <CheckIcon className="w-4 h-4 text-[#129671]" />
               Under 15MB Size
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckIcon className="w-4 h-4 text-[#145C45]" />
+              <CheckIcon className="w-4 h-4 text-[#129671]" />
               Offline-Ready
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckIcon className="w-4 h-4 text-[#145C45]" />
+              <CheckIcon className="w-4 h-4 text-[#129671]" />
               No Ads / Free Forever
             </span>
           </div>

@@ -10,7 +10,7 @@ import {
 const features = [
   {
     num: "01",
-    icon: <SmsIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <SmsIcon className="w-6 h-6 text-[#129671]" />,
     title: "Auto-Track Bank SMS",
     tagline: "Zero Manual Typing",
     description:
@@ -20,7 +20,7 @@ const features = [
   },
   {
     num: "02",
-    icon: <ChartBarIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <ChartBarIcon className="w-6 h-6 text-[#129671]" />,
     title: "Spending Breakdown",
     tagline: "Visual Analytics",
     description:
@@ -30,7 +30,7 @@ const features = [
   },
   {
     num: "03",
-    icon: <TargetIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <TargetIcon className="w-6 h-6 text-[#129671]" />,
     title: "Smart Savings Goals",
     tagline: "Daily Pacing Formula",
     description:
@@ -40,7 +40,7 @@ const features = [
   },
   {
     num: "04",
-    icon: <CloudOfflineIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <CloudOfflineIcon className="w-6 h-6 text-[#129671]" />,
     title: "Offline-First Hive Engine",
     tagline: "Works Without Data",
     description:
@@ -50,7 +50,7 @@ const features = [
   },
   {
     num: "05",
-    icon: <LockClosedIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <LockClosedIcon className="w-6 h-6 text-[#129671]" />,
     title: "100% On-Device Privacy",
     tagline: "Zero Cloud Upload",
     description:
@@ -60,7 +60,7 @@ const features = [
   },
   {
     num: "06",
-    icon: <ArrowDownTrayIcon className="w-6 h-6 text-[#145C45]" />,
+    icon: <ArrowDownTrayIcon className="w-6 h-6 text-[#129671]" />,
     title: "1-Click CSV Excel Export",
     tagline: "Audits & Tax Filing",
     description:
@@ -76,11 +76,11 @@ export default function FeaturesGrid() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Features Head */}
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#145C45]">
+          <p className="text-xs font-bold uppercase tracking-wider text-[#129671]">
             Features
           </p>
           <h2 className="mt-3 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight">
-            Everything you need to <span className="text-[#08634D]">take control</span>.
+            Everything you need to <span className="text-[#0E7D5E]">take control</span>.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#607873]">
             Automatic tracking, smart savings goals, and visual spending analytics — engineered for Nepal.
@@ -99,11 +99,11 @@ export default function FeaturesGrid() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D8F3E8] group-hover:scale-105 transition-transform">
                     {feat.icon}
                   </div>
-                  <span className="font-mono text-2xl font-extrabold text-[#145C45]/30">
+                  <span className="font-mono text-2xl font-extrabold text-[#129671]/30">
                     {feat.num}
                   </span>
                 </div>
-                <div className="text-xs font-bold uppercase tracking-wider text-[#145C45] mb-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#129671] mb-1">
                   {feat.tagline}
                 </div>
                 <h3 className="font-manrope text-xl font-bold text-[#202923]">

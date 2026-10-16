@@ -4,17 +4,17 @@ Here is the complete Sajilo Khata design system based on the landing page you li
 
 Primary brand colors
 
-Forest Green
+Vibrant Bright Emerald
 
-\#145C45
+\#129671
 
 Primary brand, buttons, navigation
 
-Deep Emerald
+Deep Emerald Accent
 
-\#08634D
+\#0E7D5E
 
-Hero emphasis, dark cards
+Hero emphasis, footer, dark cards
 
 Warm Ivory
 
@@ -72,7 +72,7 @@ Use gradients sparingly, mainly on the dashboard preview, primary buttons, and d
 
 Primary emerald gradient
 
-\#08634D → #145C45 → #0D4738
+\#0E7D5E → #129671 → #0B664E
 
 Soft background gradient
 
