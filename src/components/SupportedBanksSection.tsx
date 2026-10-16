@@ -18,17 +18,17 @@ export default function SupportedBanksSection() {
   });
 
   return (
-    <section id="banks" className="py-24 bg-[#FAF9F5] border-t border-[#E8E9E2]">
+    <section id="banks" className="py-24 bg-white border-t border-[#E6F4ED]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 rounded-full badge-mint px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 rounded-full badge-light-green px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
             Compatibility
           </div>
-          <h2 className="mt-4 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight">
-            Supported <span className="text-[#0E7D5E]">Nepal banks &amp; wallets.</span>
+          <h2 className="mt-4 font-manrope text-3xl sm:text-5xl font-extrabold text-[#0F172A] tracking-tight">
+            Supported <span className="gradient-text-emerald">Nepal banks &amp; wallets.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#607873]">
+          <p className="mt-4 text-base sm:text-lg text-[#475569]">
             Fine-tuned for Nepal’s banking SMS formats across Nabil, NIMB, NIC Asia, Global IME, eSewa, and more.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function SupportedBanksSection() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search your bank (e.g. Nabil, NIMB, NIC Asia, Global IME, eSewa)..."
-                className="w-full rounded-full border border-[#E8E9E2] bg-white px-5 py-3.5 pl-11 text-sm text-[#202923] placeholder-slate-400 focus:border-[#129671] focus:outline-none focus:ring-2 focus:ring-[#D8F3E8] shadow-2xs transition-all"
+                className="w-full rounded-full border border-[#E6F4ED] bg-white px-5 py-3.5 pl-11 text-sm text-[#0F172A] placeholder-slate-400 focus:border-[#10B981] focus:outline-none focus:ring-2 focus:ring-[#D1FAE5] shadow-2xs transition-all"
               />
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                 <SearchIcon className="w-4 h-4" />
@@ -69,8 +69,8 @@ export default function SupportedBanksSection() {
                   key={btn.id}
                   onClick={() => setFilterType(btn.id as typeof filterType)}
                   className={`rounded-full px-4 py-2 text-xs font-bold transition-all ${filterType === btn.id
-                    ? "bg-[#129671] text-white shadow-2xs"
-                    : "border border-[#E8E9E2] bg-white text-[#607873] hover:border-[#129671]"
+                    ? "bg-[#10B981] text-white shadow-2xs"
+                    : "border border-[#E6F4ED] bg-white text-[#475569] hover:border-[#10B981] hover:text-[#059669]"
                     }`}
                 >
                   {btn.label}
@@ -85,23 +85,26 @@ export default function SupportedBanksSection() {
           {filteredBanks.map((bank) => (
             <div
               key={bank.code}
-              className="group relative flex items-center justify-between rounded-2xl border border-[#E8E9E2] bg-white p-4 shadow-2xs transition-all duration-200 hover:-translate-y-1 hover:border-[#129671]"
+              className="group relative flex items-center justify-between rounded-2xl border border-[#E6F4ED] bg-white p-4 shadow-2xs transition-all duration-200 hover:-translate-y-1 hover:border-[#10B981] hover:shadow-md"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D8F3E8] font-manrope font-extrabold text-xs text-[#0E7D5E]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#ECFDF5] border border-[#D1FAE5] font-manrope font-extrabold text-xs text-[#059669]">
                   {bank.shortName.slice(0, 3).toUpperCase()}
                 </div>
                 <div>
-                  <h3 className="font-manrope text-xs sm:text-sm font-bold text-[#202923] group-hover:text-[#129671] transition-colors">
+                  <h3 className="font-manrope text-xs sm:text-sm font-bold text-[#0F172A] group-hover:text-[#059669] transition-colors">
                     {bank.shortName}
                   </h3>
-                  <p className="text-[10px] text-[#607873] uppercase tracking-wider capitalize">
+                  <p className="text-[10px] text-[#475569] uppercase tracking-wider capitalize">
                     {bank.category}
                   </p>
                 </div>
               </div>
 
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#E7F4EE] text-[#129671] text-xs font-bold" title="Verified & Supported">
+              <span
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#ECFDF5] text-[#10B981] text-xs font-bold border border-[#D1FAE5]"
+                title="Verified & Supported"
+              >
                 <CheckIcon className="w-3.5 h-3.5" />
               </span>
             </div>
@@ -109,8 +112,8 @@ export default function SupportedBanksSection() {
         </div>
 
         {filteredBanks.length === 0 && (
-          <div className="mt-8 text-center rounded-2xl border border-dashed border-[#E8E9E2] bg-white p-8 text-[#607873]">
-            <p className="text-sm font-semibold">No bank found matching &quot;{searchQuery}&quot;</p>
+          <div className="mt-8 text-center rounded-2xl border border-dashed border-[#E6F4ED] bg-white p-8 text-[#475569]">
+            <p className="text-sm font-semibold text-[#0F172A]">No bank found matching &quot;{searchQuery}&quot;</p>
             <p className="text-xs text-slate-400 mt-1">
               Have a cooperative or bank not listed? Sajilo Khata allows custom SMS sender rules inside settings!
             </p>
@@ -118,12 +121,13 @@ export default function SupportedBanksSection() {
         )}
 
         {/* Custom sender notice */}
-        <div className="mt-12 max-w-3xl mx-auto rounded-2xl border border-[#D8F3E8] bg-[#E7F4EE] p-5 text-center">
-          <h4 className="text-xs font-bold text-[#0E7D5E] uppercase tracking-wider">
+        <div className="mt-12 max-w-3xl mx-auto rounded-2xl border border-[#D1FAE5] bg-[#F0FDF4] p-5 text-center">
+          <h4 className="text-xs font-bold text-[#065F46] uppercase tracking-wider">
             Custom Senders Whitelist
           </h4>
-          <p className="mt-1 text-xs text-[#202923] leading-relaxed">
-            Have an account with a local cooperative or microfinance? Sajilo Khata includes an in-app <strong className="text-[#129671]">&quot;Custom SMS Senders&quot;</strong> whitelist manager.
+          <p className="mt-1 text-xs text-[#0F172A] leading-relaxed">
+            Have an account with a local cooperative or microfinance? Sajilo Khata includes an in-app{" "}
+            <strong className="text-[#059669]">&quot;Custom SMS Senders&quot;</strong> whitelist manager.
           </p>
         </div>
       </div>

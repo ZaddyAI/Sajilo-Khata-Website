@@ -12,18 +12,18 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8F7F2] text-[#202923] antialiased">
+    <div className="flex min-h-screen flex-col bg-[#F7FCF9] text-[#0F172A] antialiased">
       <Navbar />
 
       {/* Terms of Service Content */}
       <main className="mx-auto w-full max-w-3xl px-6 py-16">
-        <div className="card-ivory p-8 md:p-12 shadow-sm">
-          <h1 className="text-4xl font-extrabold font-manrope text-[#202923]">Terms of Service</h1>
-          <p className="mt-3 text-sm text-[#129671] font-semibold">
+        <div className="card-light-mint p-8 md:p-12 shadow-sm">
+          <h1 className="text-4xl font-extrabold font-manrope text-[#0F172A]">Terms of Service</h1>
+          <p className="mt-3 text-sm text-[#059669] font-semibold">
             Last updated: August 9, 2026
           </p>
 
-          <div className="mt-10 space-y-10 text-[#607873] leading-relaxed">
+          <div className="mt-10 space-y-10 text-[#475569] leading-relaxed">
             <section>
               <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
                 1. Acceptance of Terms

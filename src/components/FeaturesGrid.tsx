@@ -10,37 +10,37 @@ import {
 const features = [
   {
     num: "01",
-    icon: <SmsIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <SmsIcon className="w-6 h-6 text-[#059669]" />,
     title: "Auto-Track Bank SMS",
     tagline: "Zero Manual Typing",
     description:
-      "Sajilo Khata listens strictly for official bank alerts and instantly logs debit & credit transactions with merchant tags and amounts.",
+      "Sajilo Khata listens strictly for official bank alerts and instantly logs debit & credit transactions with merchant tags and amounts in NPR.",
     span: "lg:col-span-7",
     bg: "bg-white",
   },
   {
     num: "02",
-    icon: <ChartBarIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <ChartBarIcon className="w-6 h-6 text-[#059669]" />,
     title: "Spending Breakdown",
     tagline: "Visual Analytics",
     description:
       "Interactive charts break down your spending across Groceries, Dining, Rent, and Utilities with instant monthly summaries.",
     span: "lg:col-span-5",
-    bg: "bg-[#F0F5ED]",
+    bg: "bg-[#F0FDF4]/70",
   },
   {
     num: "03",
-    icon: <TargetIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <TargetIcon className="w-6 h-6 text-[#059669]" />,
     title: "Smart Savings Goals",
     tagline: "Daily Pacing Formula",
     description:
       "Set targets with deadlines for Dashain shopping, bike upgrades, or laptops. Get an automated daily savings pace.",
     span: "lg:col-span-4",
-    bg: "bg-[#F0F5ED]",
+    bg: "bg-[#F0FDF4]/70",
   },
   {
     num: "04",
-    icon: <CloudOfflineIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <CloudOfflineIcon className="w-6 h-6 text-[#059669]" />,
     title: "Offline-First Hive Engine",
     tagline: "Works Without Data",
     description:
@@ -50,17 +50,17 @@ const features = [
   },
   {
     num: "05",
-    icon: <LockClosedIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <LockClosedIcon className="w-6 h-6 text-[#059669]" />,
     title: "100% On-Device Privacy",
     tagline: "Zero Cloud Upload",
     description:
       "Never enter bank passwords or OTPs. Personal family messages and two-factor codes are strictly filtered out and never transmitted.",
     span: "lg:col-span-4",
-    bg: "bg-[#F0F5ED]",
+    bg: "bg-[#F0FDF4]/70",
   },
   {
     num: "06",
-    icon: <ArrowDownTrayIcon className="w-6 h-6 text-[#129671]" />,
+    icon: <ArrowDownTrayIcon className="w-6 h-6 text-[#059669]" />,
     title: "1-Click CSV Excel Export",
     tagline: "Audits & Tax Filing",
     description:
@@ -72,17 +72,17 @@ const features = [
 
 export default function FeaturesGrid() {
   return (
-    <section id="features" className="py-24 bg-[#F8F7F2] border-t border-[#E8E9E2]">
+    <section id="features" className="py-24 bg-[#F7FCF9] border-t border-[#E6F4ED]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Features Head */}
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#129671]">
+          <div className="inline-flex items-center gap-1.5 rounded-full badge-light-green px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
             Features
-          </p>
-          <h2 className="mt-3 font-manrope text-3xl sm:text-5xl font-extrabold text-[#202923] tracking-tight">
-            Everything you need to <span className="text-[#0E7D5E]">take control</span>.
+          </div>
+          <h2 className="mt-4 font-manrope text-3xl sm:text-5xl font-extrabold text-[#0F172A] tracking-tight">
+            Everything you need to <span className="gradient-text-emerald">take control</span>.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#607873]">
+          <p className="mt-4 text-base sm:text-lg text-[#475569]">
             Automatic tracking, smart savings goals, and visual spending analytics — engineered for Nepal.
           </p>
         </div>
@@ -92,24 +92,24 @@ export default function FeaturesGrid() {
           {features.map((feat) => (
             <div
               key={feat.title}
-              className={`${feat.span} ${feat.bg} rounded-3xl border border-[#E8E9E2] p-8 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group`}
+              className={`${feat.span} ${feat.bg} rounded-3xl border border-[#E6F4ED] p-8 shadow-xs hover:border-[#A7F3D0] hover:shadow-md transition-all duration-300 flex flex-col justify-between group`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D8F3E8] group-hover:scale-105 transition-transform">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ECFDF5] border border-[#D1FAE5] group-hover:scale-105 transition-transform">
                     {feat.icon}
                   </div>
-                  <span className="font-mono text-2xl font-extrabold text-[#129671]/30">
+                  <span className="font-mono text-2xl font-extrabold text-[#10B981]/30">
                     {feat.num}
                   </span>
                 </div>
-                <div className="text-xs font-bold uppercase tracking-wider text-[#129671] mb-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#059669] mb-1">
                   {feat.tagline}
                 </div>
-                <h3 className="font-manrope text-xl font-bold text-[#202923]">
+                <h3 className="font-manrope text-xl font-bold text-[#0F172A]">
                   {feat.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#607873] leading-relaxed">
+                <p className="mt-3 text-sm text-[#475569] leading-relaxed">
                   {feat.description}
                 </p>
               </div>

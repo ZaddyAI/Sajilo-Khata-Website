@@ -1,52 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors from theme_template.md */
-  --color-primary: #129671;
-  --color-primary-dark: #0B664E;
-  --color-primary-deep: #0E7D5E;
-  --color-primary-light: #D8F3E8;
-  --color-primary-soft: #E7F4EE;
+  /* Light Green Modern Fintech Palette */
+  --color-primary: #10B981;
+  --color-primary-dark: #059669;
+  --color-primary-light: #ECFDF5;
+  --color-primary-surface: #F0FDF4;
+  --color-primary-glow: rgba(16, 185, 129, 0.2);
 
-  /* Surfaces */
-  --color-background: #F8F7F2;
+  /* Light Accent & Borders */
+  --color-mint-border: #D1FAE5;
+  --color-mint-border-subtle: #E6F4ED;
+  --color-mint-accent: #34D399;
+
+  /* Surfaces & Canvas (Clean, Bright, Airy) */
+  --color-background: #F7FCF9;
   --color-surface: #FFFFFF;
-  --color-surface-muted: #F0F5ED;
-  --color-border: #E8E9E2;
+  --color-surface-subtle: #F0FDF4;
+  --color-border: #E6F4ED;
 
-  /* Typography */
-  --color-text: #202923;
-  --color-text-secondary: #607873;
-  --color-text-inverse: #FFFFFF;
+  /* Typography (High contrast & clean slate) */
+  --color-text: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
 
-  /* Finance status */
-  --color-income: #16866B;
-  --color-expense: #E97968;
-  --color-warning: #F5C66A;
+  /* Financial Indicators */
+  --color-income: #10B981;
+  --color-expense: #F43F5E;
+  --color-warning: #F59E0B;
 
   /* Gradients */
-  --gradient-brand: linear-gradient(135deg, #0E7D5E 0%, #129671 55%, #0B664E 100%);
-  --gradient-background: linear-gradient(135deg, #F8F7F2 0%, #F0F5ED 55%, #E7F4EE 100%);
-  --gradient-mint: linear-gradient(135deg, #D8F3E8 0%, #AEE3D0 100%);
+  --gradient-primary: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-light-mint: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #E6F4ED 100%);
+  --gradient-text-emerald: linear-gradient(135deg, #059669 0%, #10B981 50%, #34D399 100%);
 
   /* Shadows */
-  --shadow-card: 0 4px 16px rgba(18, 150, 113, 0.05);
-  --shadow-dashboard: 0 24px 64px rgba(18, 150, 113, 0.12);
-  --shadow-button: 0 5px 16px rgba(18, 150, 113, 0.25);
-  --shadow-hover: 0 12px 32px rgba(18, 150, 113, 0.1);
+  --shadow-card: 0 4px 20px -2px rgba(16, 185, 129, 0.05);
+  --shadow-card-hover: 0 16px 32px -8px rgba(16, 185, 129, 0.12);
+  --shadow-btn: 0 8px 20px -4px rgba(16, 185, 129, 0.3);
 }
 
 @theme inline {
-  --color-forest: #129671;
-  --color-forest-dark: #0B664E;
-  --color-emerald-deep: #0E7D5E;
-  --color-mint-light: #D8F3E8;
-  --color-mint-soft: #E7F4EE;
-  --color-ivory: #F8F7F2;
-  --color-ink: #202923;
-  --color-teal-gray: #607873;
-  --color-coral: #E97968;
-  --color-border-card: #E8E9E2;
+  --color-primary-green: #10B981;
+  --color-primary-green-dark: #059669;
+  --color-mint-light: #ECFDF5;
+  --color-mint-soft: #F0FDF4;
+  --color-canvas: #F7FCF9;
+  --color-ink: #0F172A;
+  --color-slate-body: #475569;
 
   --font-manrope: var(--font-heading);
   --font-inter: var(--font-body);
@@ -66,80 +67,90 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Warm Ivory & Mint background with subtle topographic mesh */
-.hero-warm-bg {
+/* Light airy mint background with subtle ambient glows */
+.hero-light-bg {
   background:
-    radial-gradient(circle 650px at 85% 15%, rgba(216, 243, 232, 0.65) 0%, transparent 60%),
-    radial-gradient(circle 500px at 15% 40%, rgba(231, 244, 238, 0.8) 0%, transparent 55%),
-    linear-gradient(135deg, #F8F7F2 0%, #F0F5ED 50%, #E7F4EE 100%);
+    radial-gradient(circle 700px at 85% 10%, rgba(16, 185, 129, 0.08) 0%, transparent 65%),
+    radial-gradient(circle 600px at 15% 35%, rgba(52, 211, 153, 0.09) 0%, transparent 60%),
+    linear-gradient(180deg, #FFFFFF 0%, #F7FCF9 60%, #F0FDF4 100%);
 }
 
-/* Mint Badges */
-.badge-mint {
-  background-color: #D8F3E8;
-  color: #0E7D5E;
-  border: 1px solid rgba(14, 125, 94, 0.16);
+/* Light Mint Pill Badges */
+.badge-light-green {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border: 1px solid rgba(16, 185, 129, 0.24);
 }
 
-/* Primary Forest Green Buttons */
-.btn-forest {
-  background-color: #129671;
+/* Vibrant Light Emerald Button */
+.btn-light-green {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #FFFFFF;
-  box-shadow: 0 5px 16px rgba(18, 150, 113, 0.28);
+  box-shadow: 0 6px 18px -2px rgba(16, 185, 129, 0.32);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-forest:hover {
-  background-color: #0E7D5E;
+.btn-light-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-light-green:hover::before {
+  left: 100%;
+}
+
+.btn-light-green:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(18, 150, 113, 0.36);
+  box-shadow: 0 10px 24px -2px rgba(16, 185, 129, 0.42);
 }
 
-.btn-forest:active {
+.btn-light-green:active {
   transform: translateY(0.5px) scale(0.98);
 }
 
-/* Secondary Outline Buttons */
-.btn-secondary-mint {
+/* Secondary Button with Delicate Light Mint Accent */
+.btn-secondary-light {
   background-color: #FFFFFF;
-  color: #129671;
-  border: 1.5px solid #D8F3E8;
-  box-shadow: 0 2px 8px rgba(18, 150, 113, 0.04);
+  color: #065F46;
+  border: 1.5px solid #D1FAE5;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.05);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-secondary-mint:hover {
-  border-color: #129671;
-  background-color: #E7F4EE;
+.btn-secondary-light:hover {
+  border-color: #10B981;
+  background-color: #ECFDF5;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(18, 150, 113, 0.1);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
 }
 
-/* Card Treatments */
-.card-ivory {
+/* Crisp Clean Card with Subtle Light Mint Border */
+.card-light-mint {
   background-color: #FFFFFF;
-  border: 1px solid #E8E9E2;
-  box-shadow: 0 4px 16px rgba(18, 150, 113, 0.04);
+  border: 1px solid #E6F4ED;
+  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.04);
   border-radius: 20px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.card-ivory:hover {
-  transform: translateY(-4px);
-  border-color: #D8F3E8;
-  box-shadow: 0 16px 36px rgba(18, 150, 113, 0.08);
+.card-light-mint:hover {
+  transform: translateY(-3px);
+  border-color: #A7F3D0;
+  box-shadow: 0 16px 36px -6px rgba(16, 185, 129, 0.1);
 }
 
-/* Dashboard Mockup Shadow & Bezel */
-.shadow-dashboard-frame {
-  box-shadow: 0 24px 64px rgba(18, 150, 113, 0.12), 0 2px 8px rgba(18, 150, 113, 0.04);
-  border: 1px solid #E8E9E2;
-  border-radius: 24px;
-}
-
-/* Gradient highlight text */
+/* Gradient text in vibrant light emerald */
 .gradient-text-emerald {
-  background: linear-gradient(135deg, #0E7D5E 0%, #129671 50%, #0B664E 100%);
+  background: linear-gradient(135deg, #059669 0%, #10B981 50%, #34D399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -154,7 +165,7 @@ body {
   }
 
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
   }
 }
 
@@ -162,16 +173,16 @@ body {
   animation: floatGentle 5s ease-in-out infinite;
 }
 
-/* Staggered 3D Dual Phone Floating Animations for Hero */
+/* Hero Dual Phone Animations */
 @keyframes heroPhonePrimary {
 
   0%,
   100% {
-    transform: translateY(0px) rotate(3deg);
+    transform: translateY(0px) rotate(2.5deg);
   }
 
   50% {
-    transform: translateY(-8px) rotate(3.5deg);
+    transform: translateY(-8px) rotate(3deg);
   }
 }
 
@@ -179,11 +190,11 @@ body {
 
   0%,
   100% {
-    transform: translateY(0px) rotate(-7deg);
+    transform: translateY(0px) rotate(-6.5deg);
   }
 
   50% {
-    transform: translateY(8px) rotate(-6.5deg);
+    transform: translateY(8px) rotate(-6deg);
   }
 }
 
@@ -195,14 +206,14 @@ body {
   animation: heroPhoneSecondary 6s ease-in-out infinite 0.75s;
 }
 
-/* Sajilo Khata Nav Pill */
+/* Nav Pill with Light Mint Frost */
 .nav-pill {
   border-radius: 999px;
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
   height: 64px;
-  box-shadow: 0 0 0 1px rgba(232, 233, 226, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 12px 32px -16px rgba(18, 150, 113, 0.22);
-  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 1px rgba(209, 250, 229, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 10px 30px -10px rgba(16, 185, 129, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,104 +221,87 @@ body {
   padding: 0 0.85rem 0 1.25rem;
 }
 
-/* Sajilo Khata Orbs */
-.orb {
+/* Airy Ambient Orbs */
+.ambient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(90px);
   pointer-events: none;
   z-index: 0;
 }
 
-.orb-a {
-  width: 480px;
-  height: 480px;
-  background: #D8F3E8;
-  opacity: 0.65;
+.ambient-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(16, 185, 129, 0.08);
   top: -8%;
-  right: 4%;
+  right: 5%;
 }
 
-.orb-b {
-  width: 380px;
-  height: 380px;
-  background: #129671;
-  opacity: 0.14;
+.ambient-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(52, 211, 153, 0.07);
   bottom: -6%;
-  right: 28%;
+  right: 25%;
 }
 
-.orb-c {
-  width: 320px;
-  height: 320px;
-  background: #E7F4EE;
-  opacity: 0.8;
+.ambient-orb-3 {
+  width: 350px;
+  height: 350px;
+  background: rgba(209, 250, 229, 0.7);
   top: 15%;
-  left: -6%;
+  left: -5%;
 }
 
-/* Sajilo Khata Phones */
-.relax-phone {
-  width: var(--phone-w, 270px);
-  aspect-ratio: 454 / 978;
-  border-radius: calc(var(--phone-w, 270px) * 0.14);
-  background: #18201B;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 40px 70px -28px rgba(18, 150, 113, 0.35), 0 14px 28px -14px rgba(0, 0, 0, 0.35);
-  padding: 5px;
+/* Phone Screen Card Styling */
+.phone-mockup-frame {
+  border-radius: 38px;
+  background: #111827;
+  padding: 9px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 24px 60px -12px rgba(16, 185, 129, 0.18),
+    0 12px 24px -8px rgba(15, 23, 42, 0.12);
 }
 
-.relax-phone img {
-  border-radius: calc(var(--phone-w, 270px) * 0.14 - 4px);
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.phone-screen-inner {
+  border-radius: 30px;
+  overflow: hidden;
+  background: #FFFFFF;
 }
 
-/* Sajilo Khata Floating Chip */
-.relax-chip {
-  border-radius: 999px;
+/* Floating Status Chips */
+.floating-chip {
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 16px 32px -14px rgba(18, 150, 113, 0.25);
-  background: rgba(255, 255, 255, 0.94);
-  color: #202923;
-  white-space: nowrap;
+  border: 1px solid rgba(209, 250, 229, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 2px 6px rgba(15, 23, 42, 0.03);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.55rem 1rem 0.55rem 0.65rem;
+  gap: 0.5rem;
   font-size: 0.8125rem;
   font-weight: 600;
-  display: inline-flex;
+  color: #0F172A;
 }
 
-/* Tabular figures for clean NPR alignment */
-.number-display {
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-}
-
-/* Custom scrollbar in warm theme */
+/* Custom scrollbar with delicate mint thumb */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F7F2;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D8F3E8;
-  border-radius: 9999px;
-  border: 2px solid #F8F7F2;
+  background: #A7F3D0;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #129671;
-}
-
-/* Selection highlight */
-::selection {
-  background-color: #D8F3E8;
-  color: #0E7D5E;
+  background: #6EE7B7;
 }
