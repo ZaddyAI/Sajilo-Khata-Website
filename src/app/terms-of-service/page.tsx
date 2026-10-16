@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F7FCF9] text-[#0F172A] antialiased">
+    <div className="flex min-h-screen flex-col bg-[#F8FAF6] text-[#191C1A] antialiased">
       <Navbar />
 
       {/* Terms of Service Content */}
       <main className="mx-auto w-full max-w-3xl px-6 py-16">
-        <div className="card-light-mint p-8 md:p-12 shadow-sm">
-          <h1 className="text-4xl font-extrabold font-manrope text-[#0F172A]">Terms of Service</h1>
-          <p className="mt-3 text-sm text-[#059669] font-semibold">
+        <div className="card-paper p-8 md:p-12 shadow-sm">
+          <h1 className="text-4xl font-extrabold font-sans text-[#191C1A]">Terms of Service</h1>
+          <p className="mt-3 text-sm text-[#425F3C] font-semibold">
             Last updated: August 9, 2026
           </p>
 
-          <div className="mt-10 space-y-10 text-[#475569] leading-relaxed">
+          <div className="mt-10 space-y-10 text-[#434840] leading-relaxed">
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 1. Acceptance of Terms
               </h2>
               <p>
@@ -43,7 +43,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 2. Description of Service
               </h2>
               <p>
@@ -72,7 +72,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 3. Eligibility
               </h2>
               <p>
@@ -84,7 +84,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 4. Account Registration
               </h2>
               <p>
@@ -116,7 +116,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 5. SMS Permission &amp; Data Processing
               </h2>
               <p>
@@ -146,7 +146,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 6. Acceptable Use
               </h2>
               <p>You agree not to:</p>
@@ -183,7 +183,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 7. Intellectual Property
               </h2>
               <p>
@@ -197,7 +197,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 8. Financial Data Disclaimer
               </h2>
               <p className="font-medium text-on-surface">
@@ -226,7 +226,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 9. Data &amp; Privacy
               </h2>
               <p>
@@ -244,7 +244,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 10. Service Availability &amp; Modifications
               </h2>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -267,7 +267,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 11. Limitation of Liability
               </h2>
               <p>
@@ -295,7 +295,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 12. Indemnification
               </h2>
               <p>
@@ -315,7 +315,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 13. Termination
               </h2>
               <p>
@@ -331,7 +331,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 14. Governing Law
               </h2>
               <p>
@@ -343,7 +343,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 15. Changes to These Terms
               </h2>
               <p>
@@ -355,7 +355,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 16. Contact Us
               </h2>
               <p>
@@ -371,7 +371,7 @@ export default function TermsOfService() {
                     href={DEVELOPER.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
+                    className="text-[#425F3C] underline decoration-[#DDE5D8] underline-offset-2 hover:decoration-[#425F3C] transition-colors"
                   >
                     {DEVELOPER.website.replace("https://", "")}
                   </a>
@@ -380,7 +380,7 @@ export default function TermsOfService() {
                   <strong>Email:</strong>{" "}
                   <a
                     href={`mailto:${DEVELOPER.email}`}
-                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
+                    className="text-[#425F3C] underline decoration-[#DDE5D8] underline-offset-2 hover:decoration-[#425F3C] transition-colors"
                   >
                     {DEVELOPER.email}
                   </a>

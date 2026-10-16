@@ -3,7 +3,7 @@ export const APP_TAGLINE = "Your money, understood. Automatically.";
 export const APP_DESCRIPTION =
   "Sajilo Khata reads supported bank SMS alerts and organizes your income and expenses in NPR — so you don't have to. Built for Nepal with 100% offline-first privacy and smart category analytics.";
 
-export const LOGO = "/sajilo_khata_logo.png";
+export const LOGO = "/logo.svg";
 export const BANNER = "/sajilokhata banner.png";
 
 // Developer & Contact Constants (centralized)

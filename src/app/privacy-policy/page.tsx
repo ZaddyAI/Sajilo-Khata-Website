@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F7FCF9] text-[#0F172A] antialiased">
+    <div className="flex min-h-screen flex-col bg-[#F8FAF6] text-[#191C1A] antialiased">
       <Navbar />
 
       {/* Privacy Policy Content */}
       <main className="mx-auto w-full max-w-3xl px-6 py-16">
-        <div className="card-light-mint p-8 md:p-12 shadow-sm">
-          <h1 className="text-4xl font-extrabold font-manrope text-[#0F172A]">Privacy Policy</h1>
-          <p className="mt-3 text-sm text-[#059669] font-semibold">
+        <div className="card-paper p-8 md:p-12 shadow-sm">
+          <h1 className="text-4xl font-extrabold font-sans text-[#191C1A]">Privacy Policy</h1>
+          <p className="mt-3 text-sm text-[#425F3C] font-semibold">
             Last updated: August 9, 2026
           </p>
 
-          <div className="mt-10 space-y-10 text-[#475569] leading-relaxed">
+          <div className="mt-10 space-y-10 text-[#434840] leading-relaxed">
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 1. Introduction
               </h2>
               <p>
@@ -42,10 +42,10 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 2. Information We Collect
               </h2>
-              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-manrope">
+              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-sans">
                 2.1 Account Information
               </h3>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
                 </li>
               </ul>
 
-              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-manrope">
+              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-sans">
                 2.2 SMS Data
               </h3>
               <p>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
                 </li>
               </ul>
 
-              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-manrope">
+              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-sans">
                 2.3 Transaction &amp; Financial Data
               </h3>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
                 <li>Category assignments and notes you add.</li>
               </ul>
 
-              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-manrope">
+              <h3 className="mb-2 mt-5 text-base font-medium text-on-surface font-sans">
                 2.4 Device &amp; Usage Data
               </h3>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 3. How We Use Your Information
               </h2>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 4. Data Storage &amp; Security
               </h2>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -157,7 +157,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 5. Data Sharing &amp; Third Parties
               </h2>
               <p>
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 6. Your Rights &amp; Choices
               </h2>
               <ul className="list-disc pl-6 space-y-1.5">
@@ -223,7 +223,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 7. Children&apos;s Privacy
               </h2>
               <p>
@@ -235,7 +235,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 8. Changes to This Privacy Policy
               </h2>
               <p>
@@ -247,7 +247,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold text-on-surface font-manrope">
+              <h2 className="mb-4 text-xl font-semibold text-on-surface font-sans">
                 9. Contact Us
               </h2>
               <p>
@@ -264,7 +264,7 @@ export default function PrivacyPolicy() {
                     href={DEVELOPER.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
+                    className="text-[#425F3C] underline decoration-[#DDE5D8] underline-offset-2 hover:decoration-[#425F3C] transition-colors"
                   >
                     {DEVELOPER.website.replace("https://", "")}
                   </a>
@@ -273,7 +273,7 @@ export default function PrivacyPolicy() {
                   <strong>Email:</strong>{" "}
                   <a
                     href={`mailto:${DEVELOPER.email}`}
-                    className="text-[#129671] underline decoration-[#D8F3E8] underline-offset-2 hover:decoration-[#129671] transition-colors"
+                    className="text-[#425F3C] underline decoration-[#DDE5D8] underline-offset-2 hover:decoration-[#425F3C] transition-colors"
                   >
                     {DEVELOPER.email}
                   </a>

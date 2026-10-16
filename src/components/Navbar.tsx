@@ -20,11 +20,11 @@ export default function Navbar() {
     <>
       <header className="sticky top-4 z-50 px-4 sm:px-6">
         <div className="mx-auto max-w-4xl">
-          <div className="nav-pill">
+          <div className="frosted-white-dock rounded-full h-16 flex items-center justify-between gap-4 px-3 sm:px-5">
             {/* Brand */}
             <Link
               href="/"
-              className="flex items-center gap-2.5 focus:outline-none group"
+              className="flex items-center gap-2.5 focus:outline-none group pl-1.5"
               aria-label="Sajilo Khata Home"
             >
               <Image
@@ -32,21 +32,21 @@ export default function Navbar() {
                 alt="Sajilo Khata Logo"
                 width={36}
                 height={36}
-                className="h-9 w-9 rounded-xl object-contain shadow-xs group-hover:scale-105 transition-transform"
+                className="h-9 w-9 rounded-xl overflow-hidden object-contain shadow-xs group-hover:scale-105 transition-transform"
                 priority
               />
-              <span className="font-manrope text-base sm:text-lg font-extrabold tracking-tight text-[#0F172A] group-hover:text-[#10B981] transition-colors">
+              <span className="font-sans text-base sm:text-lg font-extrabold tracking-tight text-[#191C1A] group-hover:text-[#425F3C] transition-colors">
                 {APP_NAME}
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#475569]">
+            <nav className="hidden md:flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#596056]">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-3.5 py-1.5 rounded-full hover:text-[#059669] hover:bg-[#ECFDF5] transition-all duration-200"
+                  className="px-3.5 py-1.5 rounded-full hover:text-[#191C1A] hover:bg-[#ECEEEA] transition-all duration-200"
                 >
                   {link.label}
                 </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 href={LINKS.playStore}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-light-green inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-bold"
+                className="btn-pill-obsidian text-xs font-bold py-2 sm:py-2.5 px-4 sm:px-5 min-h-[42px] sm:min-h-[46px]"
               >
                 <PlayStoreIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                 <span className="hidden sm:inline">Get the app</span>
@@ -69,7 +69,7 @@ export default function Navbar() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-[#0F172A] hover:bg-black/5 rounded-full"
+                className="md:hidden p-2 text-[#191C1A] hover:bg-black/5 rounded-full transition-colors"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <CloseIcon className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
@@ -81,15 +81,15 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-20 z-40 bg-slate-900/20 backdrop-blur-xs md:hidden animate-fade-in">
-          <div className="m-4 rounded-3xl bg-white/95 backdrop-blur-md p-6 shadow-2xl border border-[#D1FAE5] space-y-4">
+        <div className="fixed inset-0 top-20 z-40 bg-[#191C1A]/20 backdrop-blur-xs md:hidden animate-fade-in">
+          <div className="m-4 rounded-3xl bg-[#F8FAF6]/95 backdrop-blur-md p-6 shadow-2xl border border-[#C3C8BD] space-y-4">
             <nav className="flex flex-col space-y-1.5">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-sm font-bold text-[#0F172A] hover:bg-[#ECFDF5] hover:text-[#059669] transition-colors"
+                  className="rounded-2xl px-4 py-3 text-sm font-bold text-[#191C1A] hover:bg-[#ECEEEA] hover:text-[#425F3C] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -97,17 +97,17 @@ export default function Navbar() {
               <Link
                 href={LINKS.privacy}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm font-bold text-[#0F172A] hover:bg-[#ECFDF5] hover:text-[#059669] transition-colors"
+                className="rounded-2xl px-4 py-3 text-sm font-bold text-[#191C1A] hover:bg-[#ECEEEA] hover:text-[#425F3C] transition-colors"
               >
                 Privacy Policy
               </Link>
             </nav>
-            <div className="pt-3 border-t border-[#E6F4ED]">
+            <div className="pt-3 border-t border-[#E1E3DF]">
               <a
                 href={LINKS.playStore}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-light-green flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-bold"
+                className="btn-pill-obsidian flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-sm font-bold"
               >
                 <PlayStoreIcon className="w-4 h-4 text-white" />
                 <span>Get on Google Play</span>

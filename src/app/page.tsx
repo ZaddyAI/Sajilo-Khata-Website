@@ -10,7 +10,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F7FCF9] text-[#0F172A] antialiased">
+    <div className="flex min-h-screen flex-col bg-[#F8FAF6] text-[#191C1A] antialiased">
       {/* Scroll indicator bar & floating back to top */}
       <ScrollProgress />
 
@@ -37,7 +37,7 @@ export default function Home() {
         <CtaBanner />
       </main>
 
-      {/* Premium Obsidian Slate Navy Footer */}
+      {/* Verdant Sol Obsidian Foundation Footer */}
       <Footer />
     </div>
   );

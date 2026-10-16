@@ -1,188 +1,486 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Green Modern Fintech Palette */
-  --color-primary: #10B981;
-  --color-primary-dark: #059669;
-  --color-primary-light: #ECFDF5;
-  --color-primary-surface: #F0FDF4;
-  --color-primary-glow: rgba(16, 185, 129, 0.2);
+  /* ==========================================================================
+     Verdant Sol Design System Tokens (theme_template.md)
+     ========================================================================== */
 
-  /* Light Accent & Borders */
-  --color-mint-border: #D1FAE5;
-  --color-mint-border-subtle: #E6F4ED;
-  --color-mint-accent: #34D399;
+  /* Canvas & Surfaces */
+  --color-surface: #f8faf6;
+  --color-surface-dim: #d8dbd7;
+  --color-surface-bright: #f8faf6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f0;
+  --color-surface-container: #eceeea;
+  --color-surface-container-high: #e7e9e5;
+  --color-surface-container-highest: #e1e3df;
+  --color-on-surface: #191c1a;
+  --color-on-surface-variant: #434840;
+  --color-inverse-surface: #2e312f;
+  --color-inverse-on-surface: #eff1ed;
+  --color-outline: #73796f;
+  --color-outline-variant: #c3c8bd;
+  --color-surface-tint: #496642;
 
-  /* Surfaces & Canvas (Clean, Bright, Airy) */
-  --color-background: #F7FCF9;
-  --color-surface: #FFFFFF;
-  --color-surface-subtle: #F0FDF4;
-  --color-border: #E6F4ED;
+  /* Primary Moss Hues */
+  --color-primary: #425f3c;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #5a7853;
+  --color-on-primary-container: #ddffd1;
+  --color-inverse-primary: #afd0a4;
+  --color-primary-fixed: #caecbf;
+  --color-primary-fixed-dim: #afd0a4;
+  --color-on-primary-fixed: #062105;
+  --color-on-primary-fixed-variant: #314e2c;
 
-  /* Typography (High contrast & clean slate) */
-  --color-text: #0F172A;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94A3B8;
+  /* Secondary Earth & Obsidian */
+  --color-secondary: #596056;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dde5d8;
+  --color-on-secondary-container: #5f665c;
+  --color-secondary-fixed: #dde5d8;
+  --color-secondary-fixed-dim: #c1c9bc;
+  --color-on-secondary-fixed: #161d16;
+  --color-on-secondary-fixed-variant: #41493f;
+  --color-obsidian: #1b221a;
+  --color-obsidian-dark: #121612;
 
-  /* Financial Indicators */
-  --color-income: #10B981;
-  --color-expense: #F43F5E;
-  --color-warning: #F59E0B;
+  /* Tertiary Blossom Coral & Alerts */
+  --color-tertiary: #923d36;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #b0554c;
+  --color-on-tertiary-container: #fff3f1;
+  --color-tertiary-coral: #e07a70;
+  --color-tertiary-fixed: #ffdad6;
+  --color-tertiary-fixed-dim: #ffb4ab;
+  --color-on-tertiary-fixed: #400203;
+  --color-on-tertiary-fixed-variant: #7b2d27;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #10B981 0%, #059669 100%);
-  --gradient-light-mint: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #E6F4ED 100%);
-  --gradient-text-emerald: linear-gradient(135deg, #059669 0%, #10B981 50%, #34D399 100%);
+  /* Error Tokens */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
 
-  /* Shadows */
-  --shadow-card: 0 4px 20px -2px rgba(16, 185, 129, 0.05);
-  --shadow-card-hover: 0 16px 32px -8px rgba(16, 185, 129, 0.12);
-  --shadow-btn: 0 8px 20px -4px rgba(16, 185, 129, 0.3);
+  /* Botanical Moss Gradient Stops */
+  --moss-gradient-light: #7e9f76;
+  --moss-gradient-hero-start: #75966d;
+  --moss-gradient-mid: #5a7853;
+  --moss-gradient-hero-end: #43553e;
+  --moss-gradient-dark: #394835;
+
+  /* Elevation Shadows */
+  --shadow-level-1: 0 4px 20px -2px rgba(40, 52, 38, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-level-2: 0 8px 24px -4px rgba(40, 52, 38, 0.08), 0 2px 8px -1px rgba(0, 0, 0, 0.03);
+  --shadow-level-3: 0 12px 32px -4px rgba(18, 22, 18, 0.24);
+  --shadow-obsidian-dock: 0 16px 40px -8px rgba(18, 22, 18, 0.32);
 }
 
 @theme inline {
-  --color-primary-green: #10B981;
-  --color-primary-green-dark: #059669;
-  --color-mint-light: #ECFDF5;
-  --color-mint-soft: #F0FDF4;
-  --color-canvas: #F7FCF9;
-  --color-ink: #0F172A;
-  --color-slate-body: #475569;
+  --color-surface: var(--color-surface);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-inverse-surface: var(--color-inverse-surface);
+  --color-inverse-on-surface: var(--color-inverse-on-surface);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
 
-  --font-manrope: var(--font-heading);
-  --font-inter: var(--font-body);
+  --color-primary: var(--color-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary: var(--color-on-primary);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-primary-fixed: var(--color-primary-fixed);
+  --color-primary-fixed-dim: var(--color-primary-fixed-dim);
+  --color-on-primary-fixed: var(--color-on-primary-fixed);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+
+  --color-tertiary: var(--color-tertiary);
+  --color-tertiary-coral: var(--color-tertiary-coral);
+
+  --color-obsidian: var(--color-obsidian);
+  --color-obsidian-dark: var(--color-obsidian-dark);
+
+  --font-sans: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-plus-jakarta: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-body), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Light airy mint background with subtle ambient glows */
-.hero-light-bg {
+/* ==========================================================================
+   Verdant Sol Component & Utility Styles
+   ========================================================================== */
+
+/* Biophilic Botanical Canvas Gradient */
+.botanical-canvas-gradient {
   background:
-    radial-gradient(circle 700px at 85% 10%, rgba(16, 185, 129, 0.08) 0%, transparent 65%),
-    radial-gradient(circle 600px at 15% 35%, rgba(52, 211, 153, 0.09) 0%, transparent 60%),
-    linear-gradient(180deg, #FFFFFF 0%, #F7FCF9 60%, #F0FDF4 100%);
+    radial-gradient(ellipse 900px 500px at 85% 10%, rgba(126, 159, 118, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 800px 500px at 15% 35%, rgba(90, 120, 83, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, #F8FAF6 0%, #F2F4F0 45%, #ECEEEA 100%);
 }
 
-/* Light Mint Pill Badges */
-.badge-light-green {
-  background-color: #ECFDF5;
-  color: #065F46;
-  border: 1px solid rgba(16, 185, 129, 0.24);
-}
-
-/* Vibrant Light Emerald Button */
-.btn-light-green {
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+/* Full Hero Green Botanical Gradient Card */
+.hero-moss-gradient {
+  background: linear-gradient(145deg, #75966D 0%, #5A7853 50%, #43553E 100%);
   color: #FFFFFF;
-  box-shadow: 0 6px 18px -2px rgba(16, 185, 129, 0.32);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-light-green::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  transition: left 0.5s ease;
+.hero-moss-gradient-card {
+  background: linear-gradient(135deg, #75966D 0%, #5A7853 45%, #394835 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 60px -12px rgba(57, 72, 53, 0.35);
 }
 
-.btn-light-green:hover::before {
-  left: 100%;
-}
-
-.btn-light-green:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px -2px rgba(16, 185, 129, 0.42);
-}
-
-.btn-light-green:active {
-  transform: translateY(0.5px) scale(0.98);
-}
-
-/* Secondary Button with Delicate Light Mint Accent */
-.btn-secondary-light {
-  background-color: #FFFFFF;
-  color: #065F46;
-  border: 1.5px solid #D1FAE5;
-  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.05);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-secondary-light:hover {
-  border-color: #10B981;
-  background-color: #ECFDF5;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
-}
-
-/* Crisp Clean Card with Subtle Light Mint Border */
-.card-light-mint {
-  background-color: #FFFFFF;
-  border: 1px solid #E6F4ED;
-  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.04);
-  border-radius: 20px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.card-light-mint:hover {
-  transform: translateY(-3px);
-  border-color: #A7F3D0;
-  box-shadow: 0 16px 36px -6px rgba(16, 185, 129, 0.1);
-}
-
-/* Gradient text in vibrant light emerald */
-.gradient-text-emerald {
-  background: linear-gradient(135deg, #059669 0%, #10B981 50%, #34D399 100%);
+/* Organic Sage & Obsidian Gradient Text */
+.gradient-text-moss {
+  background: linear-gradient(135deg, #1B221A 0%, #425F3C 55%, #5A7853 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Floating micro-animation */
-@keyframes floatGentle {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-7px);
-  }
+.gradient-text-botanical {
+  background: linear-gradient(135deg, #314E2C 0%, #5A7853 50%, #7E9F76 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.animate-float-gentle {
-  animation: floatGentle 5s ease-in-out infinite;
+.gradient-text-coral {
+  background: linear-gradient(135deg, #923D36 0%, #E07A70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Hero Dual Phone Animations */
+/* Level 1: Elevated White Paper Card */
+.card-paper {
+  background-color: #FFFFFF;
+  border: 1px solid #E7E9E5;
+  border-radius: 1.75rem;
+  /* 28px smooth sweep */
+  box-shadow: var(--shadow-level-1);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-paper:hover {
+  transform: translateY(-3px);
+  border-color: #C3C8BD;
+  box-shadow: var(--shadow-level-2);
+}
+
+/* Level 2: Frosted Sage Glass Containers & Pills */
+.frosted-glass-pill {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.frosted-white-dock {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(195, 200, 189, 0.55);
+  box-shadow: 0 12px 32px -6px rgba(40, 52, 38, 0.1);
+}
+
+/* Level 3: Floating Obsidian Surfaces */
+.obsidian-surface {
+  background: #1B221A;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-level-3);
+}
+
+.obsidian-dock {
+  background: #121612;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow-obsidian-dock);
+}
+
+/* ==========================================================================
+   Pill Buttons (Min-height 52px, full-radius, tactile feel)
+   ========================================================================== */
+
+/* Primary Pill: Deep Obsidian (on light canvas) */
+.btn-pill-obsidian {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 52px;
+  border-radius: 9999px;
+  background-color: #1B221A;
+  color: #FFFFFF;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 8px 20px -4px rgba(27, 34, 26, 0.3);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pill-obsidian:hover {
+  background-color: #2E312F;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(27, 34, 26, 0.4);
+}
+
+.btn-pill-obsidian:active {
+  transform: translateY(0.5px) scale(0.985);
+}
+
+/* Primary Pill: Pure White Pill Action (for green botanical backgrounds) */
+.btn-pill-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 52px;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #1B221A;
+  padding: 0.85rem 1.85rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 10px 25px -4px rgba(18, 22, 18, 0.25);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-white:hover {
+  background-color: #F8FAF6;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -4px rgba(18, 22, 18, 0.35);
+}
+
+.btn-pill-white:active {
+  transform: translateY(0.5px) scale(0.985);
+}
+
+/* Primary Pill: Muted Moss Action */
+.btn-pill-moss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 52px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #5A7853 0%, #425F3C 100%);
+  color: #FFFFFF;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 8px 22px -4px rgba(66, 95, 60, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-moss:hover {
+  background: linear-gradient(135deg, #425F3C 0%, #314E2C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(66, 95, 60, 0.45);
+}
+
+.btn-pill-moss:active {
+  transform: translateY(0.5px) scale(0.985);
+}
+
+/* Secondary Tactile Pill Button */
+.btn-pill-subtle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #191C1A;
+  border: 1.5px solid #D8DBD7;
+  padding: 0.85rem 1.65rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-subtle:hover {
+  border-color: #5A7853;
+  background-color: #F2F4F0;
+  color: #425F3C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(90, 120, 83, 0.12);
+}
+
+/* Translucent Glass Pill (for hero banners) */
+.btn-pill-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  padding: 0.85rem 1.65rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-glass:hover {
+  background: rgba(255, 255, 255, 0.26);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Pill Badges & Chips
+   ========================================================================== */
+
+.badge-sage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  background-color: #DDE5D8;
+  color: #314E2C;
+  border: 1px solid #C3C8BD;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-coral-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  background-color: #FFDAD6;
+  color: #7B2D27;
+  border: 1px solid #FFB4AB;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+
+.badge-frosted-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Floating Status Pill Chips */
+.floating-status-pill {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid #D8DBD7;
+  box-shadow: 0 10px 28px -4px rgba(40, 52, 38, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #191C1A;
+}
+
+/* Segmented Pill Toggle */
+.segmented-pill-track {
+  background: #ECEEEA;
+  border: 1px solid #D8DBD7;
+  border-radius: 9999px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.segmented-pill-item-active {
+  background: #FFFFFF;
+  color: #191C1A;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px -1px rgba(40, 52, 38, 0.12);
+  font-weight: 700;
+}
+
+.segmented-pill-item-inactive {
+  color: #596056;
+  font-weight: 600;
+}
+
+.segmented-pill-item-inactive:hover {
+  color: #191C1A;
+}
+
+/* ==========================================================================
+   Phone Mockup Styling (Obsidian Frame & Biophilic Screen)
+   ========================================================================== */
+
+.phone-mockup-frame {
+  border-radius: 40px;
+  background: #1B221A;
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 28px 70px -14px rgba(27, 34, 26, 0.35),
+    0 12px 28px -6px rgba(66, 95, 60, 0.15);
+}
+
+.phone-screen-inner {
+  border-radius: 31px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+/* Animations */
 @keyframes heroPhonePrimary {
 
   0%,
   100% {
-    transform: translateY(0px) rotate(2.5deg);
+    transform: translateY(0px) rotate(2deg);
   }
 
   50% {
-    transform: translateY(-8px) rotate(3deg);
+    transform: translateY(-8px) rotate(2.5deg);
   }
 }
 
@@ -190,11 +488,11 @@ body {
 
   0%,
   100% {
-    transform: translateY(0px) rotate(-6.5deg);
+    transform: translateY(0px) rotate(-5.5deg);
   }
 
   50% {
-    transform: translateY(8px) rotate(-6deg);
+    transform: translateY(8px) rotate(-5deg);
   }
 }
 
@@ -206,102 +504,70 @@ body {
   animation: heroPhoneSecondary 6s ease-in-out infinite 0.75s;
 }
 
-/* Nav Pill with Light Mint Frost */
-.nav-pill {
-  border-radius: 999px;
-  backdrop-filter: blur(18px) saturate(1.4);
-  -webkit-backdrop-filter: blur(18px) saturate(1.4);
-  height: 64px;
-  box-shadow: 0 0 0 1px rgba(209, 250, 229, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 10px 30px -10px rgba(16, 185, 129, 0.1);
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0 0.85rem 0 1.25rem;
+/* Floating micro animation */
+@keyframes floatSoft {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
-/* Airy Ambient Orbs */
+.animate-float-soft {
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+/* Ambient Botanical Orbs */
 .ambient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
   pointer-events: none;
   z-index: 0;
 }
 
-.ambient-orb-1 {
-  width: 500px;
-  height: 500px;
-  background: rgba(16, 185, 129, 0.08);
-  top: -8%;
+.ambient-orb-moss {
+  width: 520px;
+  height: 520px;
+  background: rgba(90, 120, 83, 0.14);
+  top: -10%;
   right: 5%;
 }
 
-.ambient-orb-2 {
-  width: 400px;
-  height: 400px;
-  background: rgba(52, 211, 153, 0.07);
-  bottom: -6%;
-  right: 25%;
+.ambient-orb-sage {
+  width: 440px;
+  height: 440px;
+  background: rgba(126, 159, 118, 0.12);
+  bottom: -5%;
+  left: 20%;
 }
 
-.ambient-orb-3 {
-  width: 350px;
-  height: 350px;
-  background: rgba(209, 250, 229, 0.7);
-  top: 15%;
-  left: -5%;
+.ambient-orb-coral {
+  width: 320px;
+  height: 320px;
+  background: rgba(224, 122, 112, 0.08);
+  top: 30%;
+  right: -5%;
 }
 
-/* Phone Screen Card Styling */
-.phone-mockup-frame {
-  border-radius: 38px;
-  background: #111827;
-  padding: 9px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 24px 60px -12px rgba(16, 185, 129, 0.18),
-    0 12px 24px -8px rgba(15, 23, 42, 0.12);
-}
-
-.phone-screen-inner {
-  border-radius: 30px;
-  overflow: hidden;
-  background: #FFFFFF;
-}
-
-/* Floating Status Chips */
-.floating-chip {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(209, 250, 229, 0.9);
-  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 2px 6px rgba(15, 23, 42, 0.03);
-  border-radius: 999px;
-  padding: 0.5rem 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #0F172A;
-}
-
-/* Custom scrollbar with delicate mint thumb */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #F2F4F0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #A7F3D0;
-  border-radius: 4px;
+  background: #C3C8BD;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6EE7B7;
+  background: #73796F;
 }
